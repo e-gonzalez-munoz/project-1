@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pewter: '#E9EAEC',
+                        whiteOne: '#FDFDFD',
+                    },
+                    fontFamily: {
+                        josefin: ['Josefin Sans', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                },
+                backgroundImage: {
+                    'banner': "url('../assets/veggies.jpg')",
+                }
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/971077234f.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+
+<body>
+
+    <div class="flex banner h-screen bg-banner bg-cover bg-center justify-center items-center">
+
+        <div class="hero flex-column text-center space-y-4 text-white mx-10">
+            <h1 class="text-6xl">LA FOODISTA</h1>
+            <h2 class="text-3xl opacity-80">Your source for recipes from all over the world</h2>
+            <button class="text-lg border-2 font-semibold rounded-md px-3 py-1"><a href="#about">ENTER</a></button>
+        </div>
+    </div>
+
+
+    <div class="bg-gray-50 rounded-xl mb-0 flex flex-col-reverse text-center mt-16 md:flex-row mx-auto my-40 md:w-[65rem] md:mt-40"
+        id="about">
+        <div class="left w-full p-10 md:w-1/2">
+            <img src="./assets/apple.jpg" alt="" class="">
+        </div>
+        <div class="right w-full p-10 space-y-8 md:w-1/2">
+            <h2 class="text-4xl">Discover delicious decipes</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla itaque quaerat tempora iste,
+                molestias
+                reprehenderit minus natus explicabo incidunt tempore non placeat assumenda fugiat? Laudantium, possimus
+                necessitatibus aut sapiente ullam facilis numquam rerum veritatis officiis soluta dolorem temporibus
+                consequuntur quia et? Dicta id nisi modi quisquam nihil eaque quasi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, quos nihil illo et vitae ad corrupti
+                blanditiis hic error quibusdam perferendis sint dolores natus aliquam modi voluptatem corporis
+                voluptates
+                quo itaque vero sunt. Reprehenderit at perferendis dolores consequuntur doloremque enim.</p>
+        </div>
+    </div>
+
+    <div class="container my-20 mx-auto max-w-7xl px-4 md:mt-40 md:mb-40">
+        <h2 class="text-4xl text-center mb-8">Look up our recipes</h2>
+        <div class="flex items-center justify-center mb-8">
+            <form class="input-container border rounded-md flex">
+                <input type="text" class="input px-4 py-2 rounded-l-md" placeholder="Search...">
+                <button type="submit" class="magnifier px-4 py-2 rounded-r-md bg-gray-200 text-gray-700">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                </button>
+            </form>
+        </div>
+        <div class="hidden ingredientsOutput ">
+            <div class="container mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="img w-full h-[30rem] bg-cover bg-center"></div>
+                <div class="p-4 ps-8">
+                    <h2 class="title text-3xl font-semibold my-4"></h2>
+                    <p class="info text-gray-700"></p>
+                </div>
+                <div class="p-4 ps-8 mb-10">
+                    <h2 class="ingredientsHeading text-2xl font-semibold my-4">Ingredients</h2>
+                    <p class="ingredients-text text-gray-700 leading-loose"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-200">
+
+        <div
+            class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
+            <!-- Logo and social icons -->
+            <div class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0
+                md:items-start">
+                <div class="text-sm mx-auto my-6 text-center md:hidden">
+                    Copyright &copy; <span id="year"></span> All rights reserved
+                </div>
+
+                <!-- Logo -->
+                <div class="text-lg font-semibold josefin">
+                    La Foodista
+                </div>
+
+                <div class="flex justify-center space-x-4">
+                    <a href="#"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok" style="color: #000000;"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube" style="color: #000000;"></i></a>
+                </div>
+            </div>
+            <!-- List container -->
+            <div class="flex justify-around space-x-32">
+                <div class="flex flex-col space-y-3 text-sm">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Search recipes</a>
+                </div>
+                <div class="flex flex-col space-y-3 text-sm">
+                    <a href="#">Careers</a>
+                    <a href="#">Community</a>
+                    <a href="#">Private policy</a>
+                </div>
+            </div>
+            <!-- Input container -->
+            <div class="flex flex-col justify-between">
+                <form>
+                    <div class="flex space-x-3">
+                        <input type="text" class="flex-1 px-4 rounded-full focus:outline-none"
+                            placeholder="Keep in touch!">
+                        <button
+                            class="px-6 py-2 text-white rounded-full bg-gray-400 hover:bg-gray-700 focus:outline-none">Go</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
